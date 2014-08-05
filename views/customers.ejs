@@ -1,0 +1,54 @@
+
+<%- include layouts/header.ejs %>
+    
+<div id="tableDiv">
+    <p id="tableTitle">CUSTOMER LIST</p>
+</div>
+ 	                   <table id="customer" class="stripe compact display cell-border tableFont" cellspacing="0">
+ 	                     
+					            <thead>    
+					                <tr>
+					                    <th width="50px">No</th>
+					                    <th>Name</th>
+					                    <th>Address</th>
+					                    <th>Phone</th>
+					                    <th>Email</th>
+					                    <th>Age</th>
+					                    <th width="120px">Action</th>
+					                </tr>
+				                 </thead>              
+				                <% if(data.length){ 
+				                                
+				                 for(var i = 0;i < data.length;i++) { %>
+				                 
+				                <tr>
+				                    <td><%=(i+1)%></td>
+				                    <td><%=data[i].name%></td>
+				                    <td><%=data[i].address%></td>
+				                    <td><%=data[i].phone%></td>
+				                    <td><%=data[i].email%></td>
+				                    <td><%=data[i].age%></td>
+				                    
+				                    <td>
+				                        <a class="myButton-edit" href="../customers/edit/<%=data[i].id%>">Edit</a>
+				                       
+				                        <a class="myButton-delete" href="../customers/delete/<%=data[i].id%>">Delete</a>
+				                       
+				                    </td>
+				                </tr>
+				            <% }
+				            
+				             }else{ %>
+				                 <tr>
+				                    <td colspan="3">No user</td>
+				                 </tr>
+				            <% } %>
+				           
+				       </table>		
+				               
+		       		   <button onClick="addUser();" class="myButton-add ">+ Add</button>  
+
+	     <%- include layouts/footer.ejs %>      
+  
+    
+

@@ -1,0 +1,139 @@
+<head>
+        <title>Customers</title>
+        
+        <link href="/../css/jquery.dataTables.css" rel="stylesheet">
+        <link href="/../css/style.css" rel="stylesheet">
+        <link href="/../css/toolTip.css" rel="stylesheet">
+        
+        
+        <script type="text/javascript" src="/../js/form.js"></script>
+        <script type="text/javascript" src="/../js/all.js"></script>
+	    
+	    <script type="text/javascript" src="/../js/jquery.data.js"></script>
+	    <script type="text/javascript" src="/../js/jquery.watermark.js"></script>
+	    <script type="text/javascript" src="/../js/jquery.watermark.min.js"></script>
+	    
+	    <script type="text/javascript" charset="utf8" src="/../js/jquery-1.8.2.min.js"></script>
+        <script type="text/javascript" charset="utf8" src="/../js/jquery.dataTables.min.js"></script>
+        
+ 		<script  type="text/javascript">
+ 		
+	          $(document).ready(function() {
+	        	  $('#customer').dataTable();
+	          });
+          
+	          $(document).ready(function() {
+	        		var watermark = 'Name';
+	        	    
+	        		//init, set watermark text and class
+	        		$('#name').val(watermark).addClass('watermark');
+	        		//if blur and no value inside, set watermark text and class again.
+	        	 	$('#name').blur(function(){
+	        	  		if ($(this).val().length == 0){
+	        	    		$(this).val(watermark).addClass('watermark');
+	        			}
+	        	 	});
+	        		//if focus and text is watermrk, set it to empty and remove the watermark class
+	        		$('#name').focus(function(){
+	        	  		if ($(this).val() == watermark){
+	        	    		$(this).val('').removeClass('watermark');
+	        			}
+	        	 	});
+
+	        	});
+	          
+	          $(document).ready(function() {
+	        		var watermark = 'Email Address';
+	        	    
+	        		//init, set watermark text and class
+	        		$('#email').val(watermark).addClass('watermark');
+	        		//if blur and no value inside, set watermark text and class again.
+	        	 	$('#email').blur(function(){
+	        	  		if ($(this).val().length == 0){
+	        	    		$(this).val(watermark).addClass('watermark');
+	        			}
+	        	 	});
+	        		//if focus and text is watermrk, set it to empty and remove the watermark class
+	        		$('#email').focus(function(){
+	        	  		if ($(this).val() == watermark){
+	        	    		$(this).val('').removeClass('watermark');
+	        			}
+	        	 	});
+
+	           });
+	          
+	          
+	          $(document).ready(function() {
+	        		var watermark = 'Address';
+	        	    
+	        		//init, set watermark text and class
+	        		$('#address').val(watermark).addClass('watermark');
+	        		//if blur and no value inside, set watermark text and class again.
+	        	 	$('#address').blur(function(){
+	        	  		if ($(this).val().length == 0){
+	        	    		$(this).val(watermark).addClass('watermark');
+	        			}
+	        	 	});
+	        		//if focus and text is watermrk, set it to empty and remove the watermark class
+	        		$('#address').focus(function(){
+	        	  		if ($(this).val() == watermark){
+	        	    		$(this).val('').removeClass('watermark');
+	        			}
+	        	 	});
+
+	          });
+	          
+	          $(document).ready(function() {
+	        		var watermark = 'Phone';
+	        	    
+	        		//init, set watermark text and class
+	        		$('#phone').val(watermark).addClass('watermark');
+	        		//if blur and no value inside, set watermark text and class again.
+	        	 	$('#phone').blur(function(){
+	        	  		if ($(this).val().length == 0){
+	        	    		$(this).val(watermark).addClass('watermark');
+	        			}
+	        	 	});
+	        		//if focus and text is watermrk, set it to empty and remove the watermark class
+	        		$('#phone').focus(function(){
+	        	  		if ($(this).val() == watermark){
+	        	    		$(this).val('').removeClass('watermark');
+	        			}
+	        	 	});
+
+	          });
+	          
+	          $(document).ready(function() {
+	        		var watermark = 'Age';
+	        	    
+	        		//init, set watermark text and class
+	        		$('#age').val(watermark).addClass('watermark');
+	        		//if blur and no value inside, set watermark text and class again.
+	        	 	$('#age').blur(function(){
+	        	  		if ($(this).val().length == 0){
+	        	    		$(this).val(watermark).addClass('watermark');
+	        			}
+	        	 	});
+	        		//if focus and text is watermrk, set it to empty and remove the watermark class
+	        		$('#age').focus(function(){
+	        	  		if ($(this).val() == watermark){
+	        	    		$(this).val('').removeClass('watermark');
+	        			}
+	        	 	});
+
+	          });
+	          
+	          $(document).ready(function() {
+	        	  $( document ).tooltip();
+	          });
+	          
+	          
+	          
+  	    </script>
+</head>
+
+		<body>	
+			 	<div id="wrapper">
+                <div class="page-header"><h2><%=page_title%> - Customer</h2></div>
+                <div class="page-container">   
+ 
